@@ -1,0 +1,51 @@
+/* Add a transparent background to the navbar */
+.navbar {
+  background-color: #fec350;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  /* Style the navbar links */
+}
+.navbar a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  color: #3d2514;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-family: "Bebas Neue", cursive;
+}
+.navbar .logo img {
+  height: 50px;
+  margin-right: 20px;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  display: inline-block;
+}
+.navbar .top-menu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.navbar .sm-ico {
+  display: flex;
+  align-items: center;
+}
+.navbar .sm-ico img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+body {
+  margin: 0;
+}/*# sourceMappingURL=main.css.map */
