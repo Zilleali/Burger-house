@@ -1,12 +1,15 @@
   /* Add a transparent background to the navbar */
   .navbar {
-    background-color: #fec350;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
       /* Style the navbar links */
+      navbar-img{
+        background: url('\assest\media\banner\home-banner.png');
 
+      }
     a {
         text-align: center;
         text-decoration: none;
@@ -48,6 +51,11 @@
             margin-right: 10px;
         }
 
+      }
+
+      .navbar-toggle {
+        display: none;
+        cursor: pointer;
       }
   }
 

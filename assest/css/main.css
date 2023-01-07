@@ -1,51 +1,226 @@
-/* Add a transparent background to the navbar */
-.navbar {
-  background-color: #fec350;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  /* Style the navbar links */
-}
-.navbar a {
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  color: #3d2514;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-  font-family: "Bebas Neue", cursive;
-}
-.navbar .logo img {
-  height: 50px;
-  margin-right: 20px;
-}
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar li {
-  display: inline-block;
-}
-.navbar .top-menu {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-.navbar .sm-ico {
-  display: flex;
-  align-items: center;
-}
-.navbar .sm-ico img {
-  width: 30px;
-  margin-right: 10px;
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 body {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  position: relative;
+  background-color: rgba(144, 144, 144, 0.15);
+}
+
+.navbar-transparent {
+  background-color: transparent;
+  padding: 10px;
+  border-bottom: 0;
+  transition: background-color 0.35s ease 0s;
+  color: #d9d9d9;
+}
+
+.navbar-transparent .navbar-brand {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2em;
+  font-weight: bold;
+  display: inline-block;
   margin: 0;
+}
+
+.navbar-transparent .navbar-toggle {
+  background-color: transparent;
+  border: solid 1px gray;
+}
+
+.navbar-transparent .navbar-toggle .icon-bar {
+  border: solid 1px gray;
+}
+
+.navbar-transparent .nav > li > a {
+  font-size: 1.12em;
+  color: inherit;
+}
+
+.navbar-transparent .nav > li > a:link {
+  color: inherit;
+  background-color: transparent;
+}
+
+.navbar-transparent .nav > li > a:hover {
+  color: white;
+  background-color: gray;
+}
+
+.navbar-transparent .nav > li > a:active {
+  color: white;
+  background-color: #4d4d4d;
+}
+
+.navbar-transparent .nav > li.active > a {
+  background-color: gray;
+}
+
+.navbar-transparent.opaque {
+  background-color: rgba(44, 44, 44, 0.9);
+  transition: background-color 0.35s ease 0s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.image-about {
+  background-color: #676767;
+  background-image: url("/assest/media/banner/home-banner.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.image-about .darken {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30vh 0;
+}
+
+.image-about .about-content {
+  max-width: 700px;
+}
+
+.image-about .about-content .label {
+  display: inline-block;
+  margin-top: 10px !important;
+  padding-top: 7px;
+  font-size: 1em;
+}
+
+.section-title {
+  font-family: "Lobster", cursive;
+  font-size: 4.5em;
+  margin-bottom: 50px;
+}
+
+#portfolio {
+  max-width: 800px;
+  padding: 80px 0;
+}
+
+#portfolio .item {
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.65);
+}
+
+#portfolio .row > div {
+  margin-top: 30px;
+}
+
+#contact {
+  padding: 80px 0;
+}
+
+#contact .contact-text {
+  font-size: 1.8em;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  #contact .contact-text {
+    max-width: 80%;
+  }
+}
+#contact #contact-form label {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#contact #contact-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px darkgray;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+#contact #contact-form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px darkgray;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1.5em;
+  resize: vertical;
+}
+
+#contact #contact-form .btn {
+  background-color: transparent;
+  box-shadow: none;
+  border: solid 3px gray;
+  border-radius: 50px;
+  margin-top: 20px;
+  padding: 7px 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: gray;
+}
+
+#social-media {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+}
+
+#social-media-text {
+  background-color: darkgray;
+  padding: 0;
+}
+
+#social-media-text p {
+  margin: auto;
+  padding: 40px 0;
+  font-size: 2.7em;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  #social-media-text p {
+    line-height: 170px;
+    padding: 0;
+  }
+}
+#social-media-icons {
+  background-color: #333;
+  padding: 30px 0;
+}
+
+#social-media .social-icon,
+#social-media .social-icon:link,
+#social-media .social-icon:hover,
+#social-media .social-icon:active,
+#social-media .social-icon:visited {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: darkgray;
+  border-radius: 100px;
+  text-align: center;
+  color: inherit;
+  margin: 0 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#social-media .social-icon i,
+#social-media .social-icon:link i,
+#social-media .social-icon:hover i,
+#social-media .social-icon:active i,
+#social-media .social-icon:visited i {
+  line-height: 100px;
+}
+
+#social-media .social-icon:hover {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+  padding: 30px;
+  color: #e6e6e6;
+  font-size: 1.2em;
 }/*# sourceMappingURL=main.css.map */
